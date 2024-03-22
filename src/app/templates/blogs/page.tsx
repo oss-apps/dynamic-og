@@ -8,7 +8,7 @@ import { Input, Label } from "@/components/ui/Inputs";
 import { Button } from "@/components/Button";
 import { useState } from "react";
 import { Copy, CornerDownLeft, ExternalLink } from 'lucide-react';
-import { routes, serialize } from "@/utils/commonUtils";
+import { routes, serialize, getTemplate } from "@/utils/commonUtils";
 import Alert from "@/components/ui/Alert";
 import { BlogTemplateUI } from "@/components/templates/blog/Blogs";
 const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN
@@ -22,20 +22,20 @@ const BlogsTemplateSchema = z.object({
 })
 
 export type TBlogsTemplate = z.infer<typeof BlogsTemplateSchema>
+const defaultValue: TBlogsTemplate = {
+  title: "How to add a AI Chatbot to your website | DocsAI",
+  logo: "https://docsai.app/images/logo.png",
+  name: "DocsAI",
+  date: "Aug 15, 2023",
+  dark: false,
+}
 
-const templateLiteral = `${DOMAIN}/${routes.blog}?dark={false}&logo={logo}&title={title}&date={date}&name={name}`
+const templateLiteral = `${DOMAIN}/${routes.blog}?${getTemplate(defaultValue)}`
 
 
 export default function Docs() {
 
-  const [t, setT] = useState<TBlogsTemplate>({
-    title: "How to add a AI Chatbot to your website | DocsAI",
-    logo: "https://docsai.app/images/logo.png",
-    name: "DocsAI",
-    date: "Aug 15, 2023",
-    dark: false,
-  }
-  )
+  const [t, setT] = useState<TBlogsTemplate>(defaultValue)
   const { handleSubmit, formState: { errors }, getValues, reset, register } =
     useForm<z.input<typeof BlogsTemplateSchema>>({
       resolver: zodResolver(BlogsTemplateSchema),

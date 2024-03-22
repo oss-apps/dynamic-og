@@ -8,7 +8,7 @@ import { Input, Label } from "@/components/ui/Inputs";
 import { Button } from "@/components/Button";
 import { useState } from "react";
 import { Copy, CornerDownLeft, ExternalLink } from 'lucide-react';
-import { routes, serialize } from "@/utils/commonUtils";
+import { getTemplate, routes, serialize } from "@/utils/commonUtils";
 import Alert from "@/components/ui/Alert";
 const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN
 
@@ -23,20 +23,21 @@ const DocsTemplateSchema = z.object({
 
 export type TDocsTemplate = z.infer<typeof DocsTemplateSchema>
 
-const templateLiteral = `${DOMAIN}/${routes.docs}?dark={false}&logo={logo}&title={title}&sub={sub}&name={name}&website={website}`
+const defaultValue: TDocsTemplate = {
+  logo: "https://docsai.app/images/logo.png",
+  title: "How to add a AI Chatbot to your website | DocsAI",
+  sub: "The most affordable AI for your docs",
+  name: "DocsAI",
+  website: "docsai.app",
+  dark: false
+}
+
+const templateLiteral = `${DOMAIN}/${routes.docs}?${getTemplate(defaultValue)}`
 
 
 export default function Docs() {
 
-  const [t, setT] = useState<TDocsTemplate>({
-    dark: false,
-    logo: "https://docsai.app/images/logo.png",
-    title: "How to add a AI Chatbot to your website | DocsAI",
-    sub: "The most affordable AI for your docs",
-    name: "DocsAI",
-    website: "docsai.app"
-  }
-  )
+  const [t, setT] = useState<TDocsTemplate>(defaultValue)
   const { handleSubmit, formState: { errors }, getValues, reset, register } =
     useForm<z.input<typeof DocsTemplateSchema>>({
       resolver: zodResolver(DocsTemplateSchema),
