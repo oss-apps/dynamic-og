@@ -20,7 +20,7 @@ export async function GET(request: NextRequest) {
   const primary: string = params.get("primary") || "Button One"
   const secondary: string = params.get("secondary") || "Button Two"
   const dark = params.get("dark") == 'true'
-  const logo = params.get('logoUrl') || 'https://docsai.app/images/logo.png'
+  const logo = params.get('logo') || 'https://docsai.app/images/logo.png'
 
 
   const template = {

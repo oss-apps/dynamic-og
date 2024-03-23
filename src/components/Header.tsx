@@ -118,14 +118,14 @@ export function Header() {
             <div className="hidden md:block">
               {/* <NavLink href="/login">Sign in</NavLink> */}
             </div>
-            <Button href="/register" variant='outline' color="slate">
+            <Button href="/templates/docs" variant='outline' color="slate">
               <span>
                 Get started <span className="hidden lg:inline">today</span>
               </span>
             </Button>
-            <div className="-mr-1 md:hidden">
+            {/* <div className="-mr-1 md:hidden">
               <MobileNavigation />
-            </div>
+            </div> */}
           </div>
         </nav>
       </Container>

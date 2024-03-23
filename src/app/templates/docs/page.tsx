@@ -24,11 +24,11 @@ const DocsTemplateSchema = z.object({
 export type TDocsTemplate = z.infer<typeof DocsTemplateSchema>
 
 const defaultValue: TDocsTemplate = {
-  logo: "https://docsai.app/images/logo.png",
-  title: "How to add a AI Chatbot to your website | DocsAI",
-  sub: "The most affordable AI for your docs",
-  name: "DocsAI",
-  website: "docsai.app",
+  logo: "https://w7.pngwing.com/pngs/750/733/png-transparent-logo-stripe-brand-stripes-miscellaneous-purple-blue-thumbnail.png",
+  title: "Find a guide to integrate Stripe's payments APIs | Stripe",
+  sub: "Payments infrastructure for the internet",
+  name: "Stripe",
+  website: "stripe.com",
   dark: false
 }
 

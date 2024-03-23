@@ -5,5 +5,6 @@ export const getTemplate = (obj: { [x: string]: any }) => (Object.entries(obj).m
 export const routes = {
   docs: 'og/docs',
   blog: 'og/blog',
-  action: 'og/action'
+  action: 'og/action',
+  profile: 'og/profile'
 }

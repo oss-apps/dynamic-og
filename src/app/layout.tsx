@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     default: 'Dynamic OG',
   },
   description:
-    'Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.',
+    'Dynamic OG Images for everyone | Create unique OG images',
 }
 
 const inter = Inter({
@@ -39,7 +39,8 @@ export default function RootLayout({
         lexend.variable,
       )}
     >
-      <body className="flex h-full flex-col">{children}</body>
+      <body className="flex h-full flex-col">
+        {children}</body>
     </html>
   )
 }

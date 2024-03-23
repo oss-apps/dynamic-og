@@ -23,9 +23,9 @@ const BlogsTemplateSchema = z.object({
 
 export type TBlogsTemplate = z.infer<typeof BlogsTemplateSchema>
 const defaultValue: TBlogsTemplate = {
-  title: "How to add a AI Chatbot to your website | DocsAI",
-  logo: "https://docsai.app/images/logo.png",
-  name: "DocsAI",
+  title: "10 Wildly-Successful Blogs That Earn Outlandish Incomes",
+  logo: "https://asset.brandfetch.io/idP48RNgRN/idAMHRHf39.jpeg",
+  name: "Forbes",
   date: "Aug 15, 2023",
   dark: false,
 }

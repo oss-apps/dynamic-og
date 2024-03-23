@@ -6,14 +6,13 @@ import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-features.jpg'
-import screenshotExpenses from '@/images/screenshots/expenses.png'
-import screenshotPayroll from '@/images/screenshots/payroll.png'
-import screenshotReporting from '@/images/screenshots/reporting.png'
-import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
 import screenshotDocsLight from '@/images/screenshots/docs-light.png'
 import screenshotDocsDark from '@/images/screenshots/docs-dark.png'
-import screenshotDocs from '@/images/screenshots/docs.webp'
+import docsSS from '@/images/screenshots/docs-ss.webp'
+import blogsSS from '@/images/screenshots/blogs-ss.webp'
+import profileSS from '@/images/screenshots/profile-ss.webp'
+import actionSS from '@/images/screenshots/action-ss.webp'
+
 
 
 
@@ -23,25 +22,25 @@ const features = [
     title: 'Free Forever',
     description:
       'Get started with dynamic OG images for free, forever! Our freemium plan offers everything you need.',
-    image: screenshotDocs,
+    image: docsSS,
   },
   {
     title: 'Simple URLs',
     description:
       "Our intuitive interface lets anyone, regardless of technical expertise, create stunning dynamic visuals in seconds.",
-    image: screenshotDocsDark,
+    image: blogsSS,
   },
   {
     title: 'Blazingly Fast',
     description:
       "Focus on your content, and let us handle the speed.",
-    image: screenshotDocsLight,
+    image: profileSS,
   },
   {
     title: 'Premium self hosted templates',
     description:
       "Stand out from the crowd with professional, pre-designed templates. We offer a variety of customizable options",
-    image: screenshotDocsDark,
+    image: actionSS,
   },
 
 ]

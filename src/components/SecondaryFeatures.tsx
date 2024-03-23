@@ -10,7 +10,10 @@ import screenshotContacts from '@/images/screenshots/contacts.png'
 import screenshotInventory from '@/images/screenshots/inventory.png'
 import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
 import screenshotDocsLight from '@/images/screenshots/docs-light.png'
-import screenshotDocsDark from '@/images/screenshots/docs-dark.png'
+import docsEx from '@/images/template/docs-example.png'
+import blogsEx from '@/images/template/blogs-example.png'
+import actionEx from '@/images/template/action-example.png'
+
 
 
 interface Feature {
@@ -25,9 +28,8 @@ const features: Array<Feature> = [
   {
     name: 'Docs Theme',
     summary: 'Made for your docs',
-    description:
-      'We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.',
-    image: screenshotDocsLight,
+    description: '',
+    image: docsEx,
     icon: function ReportingIcon() {
       let id = useId()
       return (
@@ -59,10 +61,9 @@ const features: Array<Feature> = [
   {
     name: 'Blog Theme',
     summary:
-      'Never lose track of what’s in stock with accurate inventory tracking.',
-    description:
-      'We don’t offer this as part of our software but that statement is inarguably true. Accurate inventory tracking would help you for sure.',
-    image: screenshotDocsDark,
+      'Simple , Neat and Elegant',
+    description: '',
+    image: blogsEx,
     icon: function InventoryIcon() {
       return (
         <>
@@ -85,12 +86,11 @@ const features: Array<Feature> = [
     },
   },
   {
-    name: 'Profile theme',
+    name: 'Action theme',
     summary:
-      'Never lose track of what’s in stock with accurate inventory tracking.',
-    description:
-      'We don’t offer this as part of our software but that statement is inarguably true. Accurate inventory tracking would help you for sure.',
-    image: screenshotDocsDark,
+      'Make it look like buttons!',
+    description: '',
+    image: actionEx,
     icon: function InventoryIcon() {
       return (
         <>

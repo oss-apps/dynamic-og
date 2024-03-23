@@ -14,7 +14,7 @@ const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN
 
 const ActionTemplateSchema = z.object({
   heading: z.string(),
-  subHeading: z.string().url(),
+  subHeading: z.string(),
   logo: z.string(),
   primary: z.string(),
   secondary: z.string(),
@@ -24,10 +24,10 @@ const ActionTemplateSchema = z.object({
 export type TActionTemplate = z.infer<typeof ActionTemplateSchema>
 
 const defaultValue: TActionTemplate = {
-  heading: "How to add a AI Chatbot to your website?",
-  logo: "https://docsai.app/images/logo.png",
-  subHeading: "Docs AI for your documents",
-  primary: "Get Started",
+  heading: "Scheduling infrastructure for everyone.",
+  logo: "https://cal.com/android-chrome-512x512.png",
+  subHeading: "Focus on meeting, not making meetings.",
+  primary: "Claim Username",
   secondary: "View Pricing",
   dark: false
 }

@@ -4,6 +4,7 @@ import clsx from 'clsx'
 import '@/styles/tailwind.css'
 import { type Metadata } from 'next'
 import Sidebar from '@/components/ui/Sidebar'
+import Alert from '@/components/ui/Alert'
 
 export const metadata: Metadata = {
   title: {
@@ -35,7 +36,10 @@ export default function DashboardLayout({
     <section className='flex gap-2'>
       {/* Include shared UI here e.g. a header or sidebar */}
       <Sidebar />
-      <div className='px-3 py-8 w-full'>
+      <div className='px-1 lg:px-3 py-8 w-full'>
+        <div className='lg:hidden mb-4'>
+          <Alert text='Best viewed in larger screens , OG images may/will disorient. Use View as Image' color='amber' />
+        </div>
         {children}
       </div>
     </section>
