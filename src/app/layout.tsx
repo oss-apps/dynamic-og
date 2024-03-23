@@ -40,7 +40,9 @@ export default function RootLayout({
       )}
     >
       <body className="flex h-full flex-col">
-        {children}</body>
+        {children}
+        <script src="https://beamanalytics.b-cdn.net/beam.min.js" data-token="76cd1f7a-b81d-44fd-b29f-462581d4dc0a" async></script>
+      </body>
     </html>
   )
 }
