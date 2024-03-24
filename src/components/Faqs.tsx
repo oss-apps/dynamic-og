@@ -6,54 +6,39 @@ import backgroundImage from '@/images/background-faqs.jpg'
 const faqs = [
   [
     {
-      question: 'Does TaxPal handle VAT?',
-      answer:
-        'Well no, but if you move your company offshore you can probably ignore it.',
+      question: 'How does Dynamic OG work ?',
+      answer: 'We use the values you send in the URL of the theme, generate an image and send you back the image!',
     },
     {
-      question: 'Can I pay for my subscription via purchase order?',
-      answer: 'Absolutely, we are happy to take your money in all forms.',
+      question: 'Can I customize the colors of the theme ?',
+      answer: 'No , the customization options comes with the self hosting version.',
     },
-    {
-      question: 'How do I apply for a job at TaxPal?',
-      answer:
-        'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
-    },
+
   ],
   [
     {
-      question: 'What was that testimonial about tax fraud all about?',
+      question: 'Is Self Hosting version available?',
       answer:
-        'TaxPal is just a software application, ultimately your books are your responsibility.',
+        `At the moment no , we're still working on that , it will be availble soon!`,
     },
     {
-      question:
-        'TaxPal sounds horrible but why do I still feel compelled to purchase?',
-      answer:
-        'This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.',
+      question: 'is Self Hosting be free?',
+      answer: 'Each template is 5$ , we will help you set up the hosting environment',
     },
-    {
-      question:
-        'I found other companies called TaxPal, are you sure you can use this name?',
-      answer:
-        'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
-    },
+
   ],
   [
     {
-      question: 'How do you generate reports?',
+      question:
+        'Where will I self host?',
       answer:
-        'You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.',
+        `Using Vercel or Netlify Free usage! You don't have to pay for the servers unless you generate millions of OG images!`,
     },
     {
-      question: 'Can we expect more inventory features?',
-      answer: 'In life it’s really better to never expect anything at all.',
-    },
-    {
-      question: 'I lost my password, how do I get into my account?',
+      question: 'Will there be more free templates ?',
       answer:
-        'Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.',
-    },
+        `Yes , we will be adding more templated every week.`,
+    }
   ],
 ]
 

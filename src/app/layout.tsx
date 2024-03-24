@@ -42,6 +42,7 @@ export default function RootLayout({
       <body className="flex h-full flex-col">
         {children}
         <script src="https://beamanalytics.b-cdn.net/beam.min.js" data-token="76cd1f7a-b81d-44fd-b29f-462581d4dc0a" async></script>
+        <script src="https://docsai.app/embed.min.js" project-id="clu5akaql000dmc0zf85rdcvc" version-number="2" async></script>
       </body>
     </html>
   )
