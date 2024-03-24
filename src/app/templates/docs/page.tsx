@@ -24,7 +24,7 @@ const DocsTemplateSchema = z.object({
 export type TDocsTemplate = z.infer<typeof DocsTemplateSchema>
 
 const defaultValue: TDocsTemplate = {
-  logo: "https://w7.pngwing.com/pngs/750/733/png-transparent-logo-stripe-brand-stripes-miscellaneous-purple-blue-thumbnail.png",
+  logo: "https://dynamicog.com/fillers/stripe-logo.png",
   title: "Find a guide to integrate Stripe's payments APIs | Stripe",
   sub: "Payments infrastructure for the internet",
   name: "Stripe",

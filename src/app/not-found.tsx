@@ -7,11 +7,11 @@ import { SlimLayout } from '@/components/SlimLayout'
 export default function NotFound() {
   return (
     <SlimLayout>
-      <div className="flex">
+      {/* <div className="flex">
         <Link href="/" aria-label="Home">
           <Logo className="h-10 w-auto" />
         </Link>
-      </div>
+      </div> */}
       <p className="mt-20 text-sm font-medium text-gray-700">404</p>
       <h1 className="mt-3 text-lg font-semibold text-gray-900">
         Page not found
