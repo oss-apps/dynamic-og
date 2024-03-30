@@ -1,6 +1,7 @@
 "use client"
 import { CallToAction } from '@/components/CallToAction'
 import { Faqs } from '@/components/Faqs'
+import { FeatureBlocks } from '@/components/FeatureBlocks'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
@@ -30,11 +31,12 @@ export default function Home() {
       <main>
         <Hero />
         <PrimaryFeatures />
-        <SecondaryFeatures />
-        <CallToAction />
+        {/* <FeatureBlocks /> */}
+        {/* <SecondaryFeatures /> */}
         {/* <Testimonials /> */}
         {/* <Pricing /> */}
         <Faqs />
+        <CallToAction />
       </main>
       {/* <Footer /> */}
     </>

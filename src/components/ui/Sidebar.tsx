@@ -5,6 +5,7 @@ import {
   NewspaperIcon,
   DocumentIcon,
   UserCircleIcon,
+  RectangleStackIcon
 } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -14,13 +15,16 @@ const navigation = [
   { name: 'Docs', href: '/templates/docs', icon: DocumentIcon, count: '5', current: true },
   { name: 'Blog', href: '/templates/blogs', icon: NewspaperIcon, current: false },
   { name: 'Profile', href: '/templates/profiles', icon: UserCircleIcon, count: '12', current: false },
-  { name: 'Action', href: '/templates/actions', icon: CheckCircleIcon, count: '20+', current: false }
+  { name: 'Action', href: '/templates/actions', icon: CheckCircleIcon, count: '20+', current: false },
+  { name: 'Simple', href: '/templates/simple', icon: RectangleStackIcon, count: '20+', current: false }
+
 
 ]
 const teams = [
   { id: 1, name: 'Heroicons', href: '#', initial: 'H', current: false },
   { id: 2, name: 'Tailwind Labs', href: '#', initial: 'T', current: false },
   { id: 3, name: 'Workcation', href: '#', initial: 'W', current: false },
+
 ]
 
 

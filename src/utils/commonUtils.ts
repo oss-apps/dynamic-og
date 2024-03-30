@@ -6,5 +6,6 @@ export const routes = {
   docs: 'og/docs',
   blog: 'og/blog',
   action: 'og/action',
-  profile: 'og/profile'
+  profile: 'og/profile',
+  simple: 'og/simple'
 }
