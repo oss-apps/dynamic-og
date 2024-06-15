@@ -2,43 +2,45 @@
 
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { DocsTemplateUI } from "@/components/templates/docs/Docs";
+import { DocsTemplateUI } from "./Docs";
 import { useForm } from "react-hook-form";
 import { Input, Label } from "@/components/ui/Inputs";
 import { Button } from "@/components/Button";
 import { useState } from "react";
 import { Copy, CornerDownLeft, ExternalLink } from 'lucide-react';
-import { routes, serialize, getTemplate } from "@/utils/commonUtils";
+import { getTemplate, routes, serialize } from "@/utils/commonUtils";
 import Alert from "@/components/ui/Alert";
-import { BlogTemplateUI } from "@/components/templates/blog/Blogs";
 const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN
 
-const BlogsTemplateSchema = z.object({
+const DocsTemplateSchema = z.object({
   title: z.string(),
   logo: z.string().url(),
   name: z.string(),
-  date: z.string(),
+  sub: z.string(),
+  website: z.string(),
   dark: z.boolean()
 })
 
-export type TBlogsTemplate = z.infer<typeof BlogsTemplateSchema>
-const defaultValue: TBlogsTemplate = {
-  title: "10 Wildly-Successful Blogs That Earn Outlandish Incomes",
-  logo: "https://asset.brandfetch.io/idP48RNgRN/idAMHRHf39.jpeg",
-  name: "Forbes",
-  date: "Aug 15, 2023",
-  dark: false,
+export type TDocsTemplate = z.infer<typeof DocsTemplateSchema>
+
+const defaultValue: TDocsTemplate = {
+  logo: "https://dynamicog.com/fillers/stripe-logo.png",
+  title: "Find a guide to integrate Stripe's payments APIs | Stripe",
+  sub: "Payments infrastructure for the internet",
+  name: "Stripe",
+  website: "stripe.com",
+  dark: false
 }
 
-const templateLiteral = `${DOMAIN}/${routes.blog}?${getTemplate(defaultValue)}`
+const templateLiteral = `${DOMAIN}/${routes.docs}?${getTemplate(defaultValue)}`
 
 
 export default function Docs() {
 
-  const [t, setT] = useState<TBlogsTemplate>(defaultValue)
+  const [t, setT] = useState<TDocsTemplate>(defaultValue)
   const { handleSubmit, formState: { errors }, getValues, reset, register } =
-    useForm<z.input<typeof BlogsTemplateSchema>>({
-      resolver: zodResolver(BlogsTemplateSchema),
+    useForm<z.input<typeof DocsTemplateSchema>>({
+      resolver: zodResolver(DocsTemplateSchema),
       defaultValues: t
     });
 
@@ -50,7 +52,7 @@ export default function Docs() {
   const getLink = (dark: boolean) => {
     let tem = t;
     if (dark) tem = { ...tem, dark: true }
-    const link = `${DOMAIN}/${routes.blog}?${serialize(tem)}`
+    const link = `${DOMAIN}/${routes.docs}?${serialize(tem)}`
     return link
   }
 
@@ -74,7 +76,7 @@ export default function Docs() {
         <div className="  flex items-baseline flex-wrap gap-y-4">
           <div >
             <div className="shadow-md rounded-xl border">
-              <BlogTemplateUI t={t} />
+              <DocsTemplateUI t={t} />
             </div>
             <div className="mt-4 flex justify-center gap-x-4">
               <Button variant="solid" onClick={() => copyUrl(false)}>
@@ -88,7 +90,7 @@ export default function Docs() {
           </div>
           <div>
             <div className="shadow-md rounded-xl">
-              <BlogTemplateUI t={{ ...t, dark: true }} />
+              <DocsTemplateUI t={{ ...t, dark: true }} />
             </div>
             <div className="mt-4 flex justify-center gap-x-4">
               <Button variant="solid" onClick={() => copyUrl(true)}>
@@ -104,7 +106,7 @@ export default function Docs() {
         </div>
       </div>
       <div className="w-full lg:w-1/2">
-        <h1 className="text-xl font-semibold"> Blog Theme </h1>
+        <h1 className="text-xl font-semibold"> Docs Theme </h1>
         <hr className="mt-2"></hr>
 
         <form onSubmit={handleSubmit(onSubmit)} className="my-4 rounded-md space-y-5 grid grid-cols-1">
@@ -115,6 +117,13 @@ export default function Docs() {
               error={errors.title?.message?.toString()}
             />
           </div>
+          <div>
+            <Label>Sub</Label>
+            <Input
+              {...register('sub')}
+              error={errors.sub?.message?.toString()}
+            />
+          </div>
           <div className="w-full">
             <Label>Name</Label>
             <Input
@@ -123,10 +132,10 @@ export default function Docs() {
             />
           </div>
           <div className="gap-3 items-center">
-            <Label>Date</Label>
+            <Label>Website</Label>
             <Input
-              {...register('date')}
-              error={errors.date?.message?.toString()}
+              {...register('website')}
+              error={errors.website?.message?.toString()}
             />
           </div>
           <div className="gap-3 items-center mt-6">

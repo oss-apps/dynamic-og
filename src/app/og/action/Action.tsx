@@ -1,4 +1,4 @@
-import { TActionTemplate } from "@/app/templates/actions/page"
+import { TActionTemplate } from "@/app/og/action/page"
 
 const themeConfigs = {
   light: {

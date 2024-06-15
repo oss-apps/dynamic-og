@@ -1,4 +1,4 @@
-import { SimpleTemplate } from '@/components/templates/simple/simple';
+import { SimpleTemplate } from '../Simple';
 import { ImageResponse } from 'next/og'
 import { NextRequest } from 'next/server'
 
@@ -9,7 +9,7 @@ export const runtime = 'edge'
 export async function GET(request: NextRequest) {
 
   const fontData = await fetch(
-    new URL('../../../styles/Poppins.ttf', import.meta.url),
+    new URL('@/styles/Poppins.ttf', import.meta.url),
   ).then((res) => res.arrayBuffer());
 
   const params = request.nextUrl.searchParams

@@ -1,4 +1,4 @@
-import { TBlogsTemplate } from "@/app/templates/blogs/page"
+import { TBlogsTemplate } from "./page"
 import Image from "next/image"
 
 

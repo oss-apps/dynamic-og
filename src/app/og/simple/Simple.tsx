@@ -1,14 +1,14 @@
-import { TSimpleTemplate } from "@/app/templates/simple/page";
+import { TSimpleTemplate } from "./page";
 
 const themeConfigs = {
   light: {
-    background: '#f1f5f9',
-    color: '#1e293b',
+    background: '#f7fee7',
+    color: '#1a2e05',
 
   },
   dark: {
-    background: '#1e293b',
-    color: '#f1f5f9',
+    background: '#1a2e05',
+    color: '#f7fee7',
   }
 }
 
@@ -34,7 +34,7 @@ export function SimpleTemplate({ t }: { t: TSimpleTemplate }) {
         border: `${theme.color} 2px solid`, color: theme.color
       }}>
         {t.title?.slice(0, 80)}
-        <hr style={{ border: "#94a3b8 1px solid", width: "100%" }}></hr>
+        <hr style={{ border: `${theme.color} 1px solid`, width: "100%" }}></hr>
         <p style={{ fontSize: "52", fontWeight: "700", display: 'flex', justifyContent: 'center', color: theme.color }}> {t.website}</p>
 
       </div>
@@ -59,7 +59,7 @@ export function SimpleTemplateUI({ t }: { t: TSimpleTemplate }) {
           border: `${theme.color} 2px solid`, color: theme.color
         }}>
         {t.title?.slice(0, 80)}
-        <hr className="my-4" style={{ border: "#94a3b8 1px solid", width: "100%" }}></hr>
+        <hr className="my-4" style={{ border: `${theme.color} 1px solid`, width: "100%" }}></hr>
         <p className="text-base lg:text-xl flex justify-center" style={{ color: theme.color }}> {t.website}</p>
 
       </div>

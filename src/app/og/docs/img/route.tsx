@@ -1,4 +1,5 @@
-import { ActionTemplate } from '@/components/templates/action/Action'
+import { DocsTemplate } from '../Docs'
+
 import { ImageResponse } from 'next/og'
 import { NextRequest } from 'next/server'
 
@@ -6,30 +7,29 @@ import { NextRequest } from 'next/server'
 export const runtime = 'edge'
 
 
+
 // Image generation
 export async function GET(request: NextRequest) {
 
   const fontData = await fetch(
-    new URL('../../../styles/Poppins.ttf', import.meta.url),
+    new URL('@/styles/Poppins.ttf', import.meta.url),
   ).then((res) => res.arrayBuffer());
 
   const params = request.nextUrl.searchParams
 
-  const heading: string = params.get("heading") || "No heading";
-  const subHeading: string = params.get("subHeading") || "No sub heading";
-  const primary: string = params.get("primary") || "Button One"
-  const secondary: string = params.get("secondary") || "Button Two"
-  const dark = params.get("dark") == 'true'
-  const logo = params.get('logo') || 'https://docsai.app/images/logo.png'
-
-
   const template = {
-    heading, subHeading, primary, secondary, dark, logo
+    title: params.get('title') || 'No Title',
+    sub: params.get('sub') || 'No Sub',
+    name: params.get('name') || 'No name',
+    logo: params.get('logo') || 'https://docsai.app/images/logo.png',
+    dark: params.get('dark') == 'true',
+    website: params.get('website') || 'No website'
   }
+  console.log("🔥 ~ GET ~ template:", template)
 
   return new ImageResponse(
     (
-      <ActionTemplate t={template} />
+      <DocsTemplate t={template} />
     ),
     {
       width: 1200,
@@ -39,6 +39,7 @@ export async function GET(request: NextRequest) {
           name: 'Poppins',
           data: fontData,
           style: 'normal',
+          weight: 900
         },
       ],
       headers: {

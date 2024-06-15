@@ -12,11 +12,11 @@ import { usePathname } from 'next/navigation'
 
 
 const navigation = [
-  { name: 'Docs', href: '/templates/docs', icon: DocumentIcon, count: '5', current: true },
-  { name: 'Blog', href: '/templates/blogs', icon: NewspaperIcon, current: false },
-  { name: 'Profile', href: '/templates/profiles', icon: UserCircleIcon, count: '12', current: false },
-  { name: 'Action', href: '/templates/actions', icon: CheckCircleIcon, count: '20+', current: false },
-  { name: 'Simple', href: '/templates/simple', icon: RectangleStackIcon, count: '20+', current: false }
+  { name: 'Docs', href: '/og/docs', icon: DocumentIcon, count: '5', current: true },
+  { name: 'Blog', href: '/og/blog', icon: NewspaperIcon, current: false },
+  { name: 'Profile', href: '/og/profile', icon: UserCircleIcon, count: '12', current: false },
+  { name: 'Action', href: '/og/action', icon: CheckCircleIcon, count: '20+', current: false },
+  { name: 'Simple', href: '/og/simple', icon: RectangleStackIcon, count: '20+', current: false }
 
 
 ]

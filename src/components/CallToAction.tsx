@@ -23,7 +23,7 @@ export function CallToAction() {
           </p>
           <div className='flex gap-4 flex-wrap mt-10 justify-center'>
 
-            <Button href="/templates/docs" color="white" >
+            <Button href="/og/docs" color="white" >
             Get free templates
           </Button>
             <Button target='_blank' className='min-w-56'

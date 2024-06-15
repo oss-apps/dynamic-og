@@ -1,17 +1,17 @@
-import { TProfileTemplate } from "@/app/templates/profiles/page"
+import { TProfileTemplate } from "./page"
 import Image from "next/image"
 
 const themeConfigs = {
   light: {
     background: '#fafafa',
     color: '#0a0a0a',
-    border: "#dc2626",
+    border: "#d4d4d4",
 
   },
   dark: {
-    background: '#0a0a0a',
-    color: '#fafafa',
-    border: "#dc2626",
+    background: '#fafafa',
+    color: '#0a0a0a',
+    border: "#020617",
   }
 }
 
@@ -41,7 +41,7 @@ export function ProfileTemplate({ t }: { t: TProfileTemplate }) {
 
 
           </div>
-          <img src={t.image} style={{ width: "95px", height: "95px", borderRadius: "14px", objectFit: "cover" }} />
+          <img src={t.image} style={{ width: "95px", height: "95px", borderRadius: "14px", objectFit: "cover", border: "1px solid gray" }} />
 
         </div>
       </div>
@@ -111,12 +111,12 @@ export function ProfileTemplateUI({ t }: { t: TProfileTemplate }) {
               className="text-base lg:text-xl"
               style={{
                 color: theme.color,
-              fontWeight: 400,
+                fontWeight: 400,
               }}> {t.role}</span>
 
 
           </div>
-          <Image alt="Profile" className="rounded" objectFit="cover" src={t.image} width={65} height={65} style={{ height: 65, objectFit: "cover" }} />
+          <Image alt="Profile" className="rounded border-slate-100 border" objectFit="cover" src={t.image} width={65} height={65} style={{ height: 65, objectFit: "cover" }} />
 
         </div>
       </div>
@@ -144,7 +144,7 @@ export function ProfileTemplateUI({ t }: { t: TProfileTemplate }) {
         {t.website}
       </span>
 
-      <Image alt="Logo" width={35} objectFit="cover" height={35} src={t.logo} style={{ position: "absolute", bottom: 10, left: 20, width: "35px", height: "35px", border: "1px solid #f0f9ff", borderRadius: "8px" }} />
+      <Image alt="Logo" width={35} objectFit="cover" className="border-slate-100 border" height={35} src={t.logo} style={{ position: "absolute", bottom: 10, left: 20, width: "35px", height: "35px", border: "1px solid #f0f9ff", borderRadius: "8px" }} />
 
 
     </div >

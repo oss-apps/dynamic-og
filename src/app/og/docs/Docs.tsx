@@ -1,4 +1,4 @@
-import { TDocsTemplate } from "@/app/templates/docs/page"
+import { TDocsTemplate } from "./page"
 import { fontSizeCalculator } from "@/components/utils"
 import Image from "next/image"
 

@@ -21,7 +21,7 @@ const features = [
   {
     title: 'Free Forever',
     description:
-      'Get started with dynamic OG images for free, forever! Our freemium plan offers everything you need.',
+      'Get started with dynamic OG images for free, forever! Our free plan offers everything you need.',
     image: docsSS,
   },
   {

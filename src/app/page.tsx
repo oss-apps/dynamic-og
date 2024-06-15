@@ -2,6 +2,7 @@
 import { CallToAction } from '@/components/CallToAction'
 import { Faqs } from '@/components/Faqs'
 import { FeatureBlocks } from '@/components/FeatureBlocks'
+import Feed from '@/components/Feed'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
@@ -35,6 +36,7 @@ export default function Home() {
         {/* <SecondaryFeatures /> */}
         {/* <Testimonials /> */}
         {/* <Pricing /> */}
+        <Feed />
         <Faqs />
         <CallToAction />
       </main>

@@ -2,11 +2,21 @@ import Image from 'next/image'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import backgroundImage from '@/images/background-faqs.jpg'
 
 
 export function Hero() {
   return (
-    <Container className="pb-16 pt-20 text-center lg:pt-40">
+    <Container className="pb-16 relative pt-20 text-center lg:pt-40">
+      <Image
+        className="absolute left-1/2 -z-10 top-0 max-w-none -translate-y-1/4 translate-x-[-50%]"
+        src={backgroundImage}
+        alt=""
+        width={1558}
+        height={946}
+        
+        unoptimized
+      />
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
         Dynamic{' '}
         <span className="relative whitespace-nowrap text-fuchsia-600">
@@ -28,7 +38,7 @@ export function Hero() {
 
       </p>
       <div className="mt-10 flex justify-center flex-wrap gap-6">
-        <Button href="/templates/docs" className='min-w-56'>View templates</Button>
+        <Button href="/og/docs" className='min-w-56'>View templates</Button>
         <Button target='_blank' className='min-w-56'
           href="https://cal.com/shrihari.dev/10min"
           variant="outline"
