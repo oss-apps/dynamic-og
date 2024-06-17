@@ -7,17 +7,7 @@ import backgroundImage from '@/images/background-faqs.jpg'
 
 export function Hero() {
   return (
-    <Container className="pb-16 relative pt-20 text-center lg:pt-40">
-      <Image
-        className="absolute left-1/2 -z-10 top-0 max-w-none -translate-y-1/4 translate-x-[-50%]"
-        src={backgroundImage}
-        alt=""
-        width={1558}
-        height={946}
-        
-        unoptimized
-      />
-      <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
+    <Container className="pb-16 pt-20 text-center lg:pt-40">      <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
         Dynamic{' '}
         <span className="relative whitespace-nowrap text-fuchsia-600">
           <svg

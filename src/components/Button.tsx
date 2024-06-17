@@ -1,11 +1,21 @@
 import Link from 'next/link'
 import clsx from 'clsx'
+import Script from 'next/script';
+import { Gem } from 'lucide-react';
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'stripe-buy-button': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
+    }
+  }
+}
 
 const baseStyles = {
   solid:
-    'group border-2 inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2',
+    'group flex gap-1 items-center border-2 inline-flex items-center justify-center rounded-full lg:py-2 lg:px-4 p-1 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2',
   outline:
-    'group border-2 inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none',
+    'group flex gap-1 items-center border-2 inline-flex  items-center justify-center rounded-full lg:py-2 lg:px-4 p-2 text-sm focus:outline-none',
 }
 
 const variantStyles = {
@@ -20,7 +30,7 @@ const variantStyles = {
   },
   outline: {
     slate:
-      'ring-slate-400 text-slate-700 hover:text-slate-900 hover:ring-slate-400 active:bg-slate-100 active:text-slate-700 focus-visible:outline-blue-600 focus-visible:ring-slate-400',
+      'ring-slate-400 text-slate-800 hover:text-slate-900 hover:ring-slate-400 active:bg-slate-100 active:text-slate-700 focus-visible:outline-blue-600 focus-visible:ring-slate-400',
     white:
       'ring-slate-700 text-white hover:ring-slate-500 active:ring-slate-700 active:text-slate-400 focus-visible:outline-white',
   },
@@ -62,4 +72,29 @@ export function Button({ className, ...props }: ButtonProps) {
   ) : (
     <Link className={className} {...props} />
   )
+}
+
+export function BuyButton() {
+  // Paste the stripe-buy-button snippet in your React component
+  return (
+    <> 
+    <Script async src="https://js.stripe.com/v3/buy-button.js" />
+    <stripe-buy-button
+      buy-button-id="buy_btn_1PSbmcK27QgSmXIJVMNBHK5g"
+      publishable-key="pk_live_51MwfzMK27QgSmXIJ8LtNlIqcFMh8FD2UhGZvCdBveMDwnOtxOThw9UtaVowD5FZ4fQdvX05Q9yALGnobtzZgcIhW00LglEbT0s"
+      >
+    </stripe-buy-button>
+      </>
+  );
+}
+
+export function BuyButtonSmall() {
+  // Paste the stripe-buy-button snippet in your React component
+  return (
+    <>
+      <Button target='_blank' variant='solid' className='min-w-[30px]' color='slate' href="https://buy.stripe.com/5kAcP8aVyers2yc000">
+        <Gem className='h-4 w-4 ' /> <span className='xl:block hidden'> Buy Now </span>
+      </Button>
+    </>
+  );
 }

@@ -19,7 +19,7 @@ export async function GET(request: NextRequest) {
   const role: string = params.get("role") || "No role"
   const dark = params.get('dark') == 'true'
   const desc = params.get("desc") || "No description"
-  const logo: string = params.get("logoUrl") || "https://docsai.app/images/logo.png"
+  const logo: string = params.get("logo") || "https://docsai.app/images/logo.png"
   const website: string = params.get("website") || "No website"
   const image: string = params.get("image") || "https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=1505"
 

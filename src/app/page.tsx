@@ -1,4 +1,5 @@
 "use client"
+import { BuyButton } from '@/components/Button'
 import { CallToAction } from '@/components/CallToAction'
 import { Faqs } from '@/components/Faqs'
 import { FeatureBlocks } from '@/components/FeatureBlocks'
@@ -6,11 +7,13 @@ import Feed from '@/components/Feed'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
+import PaidFeatures from '@/components/PaidFeatures'
 import { Pricing } from '@/components/Pricing'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
 import { Testimonials } from '@/components/Testimonials'
 import Slideover from '@/components/ui/Slideover'
+import Script from 'next/script'
 import { useState } from 'react'
 
 export default function Home() {
@@ -28,7 +31,6 @@ export default function Home() {
   return (
     <>
       <Header />
-
       <main>
         <Hero />
         <PrimaryFeatures />
@@ -37,7 +39,9 @@ export default function Home() {
         {/* <Testimonials /> */}
         {/* <Pricing /> */}
         <Feed />
+        <PaidFeatures />
         <Faqs />
+
         <CallToAction />
       </main>
       {/* <Footer /> */}

@@ -26,8 +26,8 @@ export type TProfileTemplate = z.infer<typeof ProfileTemplateSchema>
 
 const defaultValue: TProfileTemplate = {
   name: "Elon Musk",
-  logo: "https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?size=338&ext=jpg&ga=GA1.1.735520172.1711152000&semt=ais",
-  image: "https://www.investopedia.com/thmb/1WsvySVwOtar439kYEFtSwV3eDw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1395371348-a3f9430f269b4f73b2659fe10c21c88c.jpg",
+  logo: "http://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?size=338&ext=jpg&ga=GA1.1.735520172.1711152000&semt=ais",
+  image: "https://dynamicog.com/fillers/elon-musk-profile.jpeg",
   role: "Tesla | SpaceX | X",
   website: "X Formerly Twitter",
   desc: "Elon Reeve Musk is a businessman and investor. He is the founder, chairman, CEO, and CTO of SpaceX",
@@ -82,7 +82,7 @@ export default function Profile() {
               <ProfileTemplateUI t={t} />
             </div>
             <div className="mt-4 flex justify-center gap-x-4">
-              <Button variant="solid" onClick={() => copyUrl(false)}>
+              <Button variant="outline" onClick={() => copyUrl(false)}>
                 <Copy className="w-4 h-4 mr-1" />
                 Copy as URL</Button>
               <Button variant="outline" onClick={() => openImage(false)} >
@@ -96,7 +96,7 @@ export default function Profile() {
               <ProfileTemplateUI t={{ ...t, dark: true }} />
             </div>
             <div className="mt-4 flex justify-center gap-x-4">
-              <Button variant="solid" onClick={() => copyUrl(true)}>
+              <Button variant="outline" onClick={() => copyUrl(true)}>
                 <Copy className="w-4 h-4 mr-1" />
                 Copy as URL</Button>
               <Button variant="outline" onClick={() => openImage(true)} >

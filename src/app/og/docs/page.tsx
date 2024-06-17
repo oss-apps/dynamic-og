@@ -79,7 +79,7 @@ export default function Docs() {
               <DocsTemplateUI t={t} />
             </div>
             <div className="mt-4 flex justify-center gap-x-4">
-              <Button variant="solid" onClick={() => copyUrl(false)}>
+              <Button variant="outline" onClick={() => copyUrl(false)}>
                 <Copy className="w-4 h-4 mr-1" />
                 Copy as URL</Button>
               <Button variant="outline" onClick={() => openImage(false)} >
@@ -93,7 +93,7 @@ export default function Docs() {
               <DocsTemplateUI t={{ ...t, dark: true }} />
             </div>
             <div className="mt-4 flex justify-center gap-x-4">
-              <Button variant="solid" onClick={() => copyUrl(true)}>
+              <Button variant="outline" onClick={() => copyUrl(true)}>
                 <Copy className="w-4 h-4 mr-1" />
                 Copy as URL</Button>
               <Button variant="outline" onClick={() => openImage(true)} >

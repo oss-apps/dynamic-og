@@ -7,7 +7,7 @@ const faqs = [
   [
     {
       question: 'How does Dynamic OG work ?',
-      answer: 'We use the values you send in the URL of the theme, generate an image and send you back the image!',
+      answer: 'We use the values you send in the URL of the theme, generate an image and send you back the image! OG Image as a service',
     },
     {
       question: 'Can I customize the colors of the theme ?',
@@ -19,7 +19,7 @@ const faqs = [
     {
       question: 'Is Self Hosting version available?',
       answer:
-        `Yes , schedule a meeting or join discord or just send us email for details. We get back to you within 24hrs or you get a free template of your choice.`,
+        `Yes , schedule a meeting or join discord or just send us email for details. We get back to you within 48hrs of payment or you get a free template of your choice.`,
     },
     {
       question: 'is Self Hosting be free?',
@@ -32,12 +32,12 @@ const faqs = [
       question:
         'Where will I self host?',
       answer:
-        `Using Vercel or Netlify Free usage! You don't have to pay for the servers unless you generate millions of OG images!`,
+        `Using Vercel, Netlify or Cloudflare Free usage! You don't have to pay for the servers unless you generate millions of OG images!`,
     },
     {
       question: 'Will there be more free templates ?',
       answer:
-        `Yes , All the templates will be free to use!`,
+        `Yes , All the templates will be free to use! Only customization are paid self hosted.`,
     }
   ],
 ]

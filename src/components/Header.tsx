@@ -7,6 +7,7 @@ import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import { NavLink } from './NavLink'
 
 function MobileNavLink({
   href,
@@ -85,7 +86,7 @@ function MobileNavigation() {
           >
             {/* <MobileNavLink href="#features">Features</MobileNavLink> */}
             {/* <MobileNavLink href="#testimonials">Testimonials</MobileNavLink> */}
-            {/* <MobileNavLink href="#pricing">Pricing</MobileNavLink> */}
+            <MobileNavLink href="#pricing">Pricing</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
             {/* <MobileNavLink href="/login">Sign in</MobileNavLink> */}
           </Popover.Panel>
@@ -97,7 +98,7 @@ function MobileNavigation() {
 
 export function Header() {
   return (
-    <header className="py-6">
+    <header className="py-6 sticky top-0">
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
@@ -111,7 +112,7 @@ export function Header() {
             <div className="hidden md:flex md:gap-x-6">
               {/* <NavLink href="#features">Features</NavLink> */}
               {/* <NavLink href="#testimonials">Testimonials</NavLink> */}
-              {/* <NavLink href="#pricing">Pricing</NavLink> */}
+              <NavLink href="#pricing">Pricing</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
@@ -123,9 +124,9 @@ export function Header() {
                 <span className="inline">Join Discord </span>
               </span>
             </Button>
-            {/* <div className="-mr-1 md:hidden">
+            <div className="-mr-1 md:hidden">
               <MobileNavigation />
-            </div> */}
+            </div>
           </div>
         </nav>
       </Container>

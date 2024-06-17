@@ -25,7 +25,7 @@ export type TActionTemplate = z.infer<typeof ActionTemplateSchema>
 
 const defaultValue: TActionTemplate = {
   heading: "Scheduling infrastructure for everyone.",
-  logo: "https://cal.com/android-chrome-512x512.png",
+  logo: "https://dynamicog.com/fillers/cal-logo.png",
   subHeading: "Focus on meeting, not making meetings.",
   primary: "Claim Username",
   secondary: "View Pricing",
@@ -80,7 +80,7 @@ export default function Action() {
               <ActionTemplateUI t={t} />
             </div>
             <div className="mt-4 flex justify-center gap-x-4">
-              <Button variant="solid" onClick={() => copyUrl(false)}>
+              <Button variant="outline" onClick={() => copyUrl(false)}>
                 <Copy className="w-4 h-4 mr-1" />
                 Copy as URL</Button>
               <Button variant="outline" onClick={() => openImage(false)} >
@@ -94,7 +94,7 @@ export default function Action() {
               <ActionTemplateUI t={{ ...t, dark: true }} />
             </div>
             <div className="mt-4 flex justify-center gap-x-4">
-              <Button variant="solid" onClick={() => copyUrl(true)}>
+              <Button variant="outline" onClick={() => copyUrl(true)}>
                 <Copy className="w-4 h-4 mr-1" />
                 Copy as URL</Button>
               <Button variant="outline" onClick={() => openImage(true)} >

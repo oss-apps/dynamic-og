@@ -23,7 +23,7 @@ const BlogsTemplateSchema = z.object({
 export type TBlogsTemplate = z.infer<typeof BlogsTemplateSchema>
 const defaultValue: TBlogsTemplate = {
   title: "10 Wildly-Successful Blogs That Earn Outlandish Incomes",
-  logo: "https://asset.brandfetch.io/idP48RNgRN/idAMHRHf39.jpeg",
+  logo: "https://dynamicog.com/fillers/forbes-logo.jpeg",
   name: "Forbes",
   date: "Aug 15, 2023",
   dark: false,
@@ -76,7 +76,7 @@ export default function Docs() {
               <BlogTemplateUI t={t} />
             </div>
             <div className="mt-4 flex justify-center gap-x-4">
-              <Button variant="solid" onClick={() => copyUrl(false)}>
+              <Button variant="outline" onClick={() => copyUrl(false)}>
                 <Copy className="w-4 h-4 mr-1" />
                 Copy as URL</Button>
               <Button variant="outline" onClick={() => openImage(false)} >
@@ -90,7 +90,7 @@ export default function Docs() {
               <BlogTemplateUI t={{ ...t, dark: true }} />
             </div>
             <div className="mt-4 flex justify-center gap-x-4">
-              <Button variant="solid" onClick={() => copyUrl(true)}>
+              <Button variant="outline" onClick={() => copyUrl(true)}>
                 <Copy className="w-4 h-4 mr-1" />
                 Copy as URL</Button>
               <Button variant="outline" onClick={() => openImage(true)} >
@@ -143,7 +143,7 @@ export default function Docs() {
             <Button variant="outline" type="button" onClick={copyLiteral}>
               <Copy className="w-4 h-4 mr-1" />
               Copy Template</Button>
-            <Button variant="solid" type="submit" >
+            <Button variant="outline" type="submit" >
               <CornerDownLeft className="w-4 h-4 mr-1" />
               Generate</Button>
 

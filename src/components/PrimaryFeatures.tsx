@@ -6,15 +6,10 @@ import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import screenshotDocsLight from '@/images/screenshots/docs-light.png'
-import screenshotDocsDark from '@/images/screenshots/docs-dark.png'
 import docsSS from '@/images/screenshots/docs-ss.webp'
 import blogsSS from '@/images/screenshots/blogs-ss.webp'
 import profileSS from '@/images/screenshots/profile-ss.webp'
 import actionSS from '@/images/screenshots/action-ss.webp'
-
-
-
 
 
 const features = [
@@ -100,7 +95,7 @@ export function PrimaryFeatures() {
                       )}
                     >
                       <h3>
-                        <Tab
+                        <Tab type='button'
                           className={clsx(
                             'font-display text-lg ui-not-focus-visible:outline-none',
                             selectedIndex === featureIndex
@@ -128,7 +123,7 @@ export function PrimaryFeatures() {
               </div>
               <Tab.Panels className="lg:col-span-7">
                 {features.map((feature) => (
-                  <Tab.Panel key={feature.title} unmount={false}>
+                  <Tab.Panel key={feature.title} unmount={false} >
                     <div className="relative sm:px-6 lg:hidden">
                       <div className="absolute -inset-x-4 bottom-[-4.25rem] top-[-6.5rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
                       <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">

@@ -1,4 +1,5 @@
 import { CodeBracketIcon, PencilSquareIcon, PhotoIcon, RectangleStackIcon } from "@heroicons/react/16/solid"
+import { BuyButton } from "./Button"
 
 const features = [
   {
