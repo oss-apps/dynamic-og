@@ -5,7 +5,8 @@ import {
   NewspaperIcon,
   DocumentIcon,
   UserCircleIcon,
-  RectangleStackIcon
+  RectangleStackIcon,
+  PhotoIcon,
 } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -17,9 +18,8 @@ const navigation = [
   { name: 'Blog', href: '/og/blog', icon: NewspaperIcon, current: false },
   { name: 'Profile', href: '/og/profile', icon: UserCircleIcon, count: '12', current: false },
   { name: 'Action', href: '/og/action', icon: CheckCircleIcon, count: '20+', current: false },
-  { name: 'Simple', href: '/og/simple', icon: RectangleStackIcon, count: '20+', current: false }
-
-
+  { name: 'Simple', href: '/og/simple', icon: RectangleStackIcon, count: '20+', current: false },
+  { name: 'Split', href: '/og/split-img', icon: PhotoIcon, count: '20+', current: false }
 ]
 const teams = [
   { id: 1, name: 'Heroicons', href: '#', initial: 'H', current: false },

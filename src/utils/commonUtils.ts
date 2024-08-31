@@ -7,5 +7,6 @@ export const routes = {
   blog: 'og/blog/img',
   action: 'og/action/img',
   profile: 'og/profile/img',
-  simple: 'og/simple/img'
+  simple: 'og/simple/img',
+  'split-image' : 'og/split-img/img'
 }
