@@ -6,7 +6,7 @@ const features = [
   {
     name: 'Pricing',
     description:
-      `Get lifetime access for just $10 per template.  Customize them to match your style. Own your templates for ever.`,
+      `Its free! we're creating a self-hosting guide to help you deploy with your customizations fonts , colors.`,
     icon: DollarSign,
   },
   {

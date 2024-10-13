@@ -62,7 +62,7 @@ export default function Sidebar() {
               ))}
             </ul>
           </li>
-          <BuyButtonSmall></BuyButtonSmall>
+          {/* <BuyButtonSmall></BuyButtonSmall> */}
       </ul>
       </nav>
     </div >

@@ -19,11 +19,11 @@ const faqs = [
     {
       question: 'Is Self Hosting version available?',
       answer:
-        `Yes , schedule a meeting or join discord or just send us email for details. We get back to you within 48hrs of payment or you get a free template of your choice.`,
+        `Yes , join discord or just send us email for details. We're working on the self-hosting guide`,
     },
     {
       question: 'is Self Hosting be free?',
-      answer: 'Each template is 10$ , we will help you set up the hosting environment',
+      answer: 'Yes its free, we will help you set up the hosting environment',
     },
 
   ],
@@ -37,7 +37,7 @@ const faqs = [
     {
       question: 'Will there be more free templates ?',
       answer:
-        `Yes , All the templates will be free to use! Only customization are paid self hosted.`,
+        `Yes , All the templates will be free to use! Only customizations are self hosted.`,
     }
   ],
 ]

@@ -1,4 +1,4 @@
-import { Server, Settings, ContactRound } from 'lucide-react'
+import { Server, Settings, ContactRound , GitPullRequestArrowIcon} from 'lucide-react'
 import image from '@/images/paid-features.png'
 import Image from 'next/image'
 import { BuyButton } from './Button'
@@ -11,9 +11,10 @@ const features = [
     icon: Settings,
   },
   {
-    name: 'Full Refund + Free self hosted',
-    description: `If we don't get back to you within 2 days of payment, you can claim Full Refund and Self hosted template of your choice`,
-    icon: Server,
+    name: 'Open Source',
+    description:
+      `We're building a open source guide to deploy dynamic og on your servers.`,
+    icon: GitPullRequestArrowIcon,
   },
   {
     name: 'Contact us',
@@ -29,8 +30,8 @@ export default function PaidFeatures() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:ml-auto lg:pl-4 lg:pt-4">
             <div className="lg:max-w-lg">
-              <h2 className="text-base font-semibold leading-7 text-fuchsia-600">Deploy faster</h2>
-              <p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">What do I get after purchase ?</p>
+              <h2 className="text-base font-semibold leading-7 text-fuchsia-600">Deploy on your servers</h2>
+              <p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl"> How do I self host ?</p>
               <p className="mt-6 text-lg leading-8 text-gray-600">
                 We will help you deploy your application, either as a standalone service or integrated with your existing Next.js project.
               </p>
@@ -46,7 +47,7 @@ export default function PaidFeatures() {
                 ))}
               </dl>
               <div className='flex justify-center xl:mt-6 mt-4'>
-              <BuyButton />
+              {/* <BuyButton /> */}
               </div>
             </div>
           </div>
