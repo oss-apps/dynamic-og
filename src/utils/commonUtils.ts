@@ -8,5 +8,7 @@ export const routes = {
   action: 'og/action/img',
   profile: 'og/profile/img',
   simple: 'og/simple/img',
-  'split-image' : 'og/split-img/img'
+  'split-image' : 'og/split-img/img',
+  'l-split': 'og/split-img-2/img',
+
 }
