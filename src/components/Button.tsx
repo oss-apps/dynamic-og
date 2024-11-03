@@ -98,3 +98,14 @@ export function BuyButtonSmall() {
     </>
   );
 }
+
+export function SmallButton( props : {href : string , text : string, icon : any}) {
+  // Paste the stripe-buy-button snippet in your React component
+  return (
+    <>
+      <Button target='_blank' variant='solid' className='min-w-[30px]' color='slate' href={props.href}>
+        <props.icon className='h-4 w-4 ' /> <span className='xl:block hidden'> {props.text} </span>
+      </Button>
+    </>
+  );
+}

@@ -10,17 +10,18 @@ import {
 } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Button, BuyButtonSmall } from '../Button'
-
+import { Button, BuyButtonSmall, SmallButton } from '../Button'
+import { Presentation, Book, Image, RotateCcwSquare, RotateCwSquare, Github } from 'lucide-react'
 
 const navigation = [
-  { name: 'Docs', href: '/og/docs', icon: DocumentIcon, count: '5', current: true },
+  { name: 'Docs', href: '/og/docs', icon: Book, count: '5', current: true },
   { name: 'Blog', href: '/og/blog', icon: NewspaperIcon, current: false },
   { name: 'Profile', href: '/og/profile', icon: UserCircleIcon, count: '12', current: false },
   { name: 'Action', href: '/og/action', icon: CheckCircleIcon, count: '20+', current: false },
   { name: 'Simple', href: '/og/simple', icon: RectangleStackIcon, count: '20+', current: false },
-  { name: 'R-Split', href: '/og/split-img', icon: PhotoIcon, count: '20+', current: false } ,
-  { name: 'L-Split', href: '/og/split-img-2', icon: PhotoIcon, count: '20+', current: false }
+  { name: 'R-Split', href: '/og/split-img', icon: RotateCwSquare, count: '20+', current: false } ,
+  { name: 'L-Split', href: '/og/split-img-2', icon: RotateCcwSquare, count: '20+', current: false },
+  { name: 'Screenshot', href: '/og/ss', icon: Presentation, count: '20+', current: false },
 
 ]
 const teams = [
@@ -64,7 +65,7 @@ export default function Sidebar() {
               ))}
             </ul>
           </li>
-          {/* <BuyButtonSmall></BuyButtonSmall> */}
+          <SmallButton href="https://github.com/oss-apps/dynamic-og" text="GitHub" icon={Github}></SmallButton>
       </ul>
       </nav>
     </div >

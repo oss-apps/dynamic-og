@@ -11,8 +11,8 @@ export const metadata: Metadata = {
     template: '%s - DOG',
     default: 'Dynamic OG',
   },
-  description:
-    'Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.',
+  description: "Create Dynamic og images for free !"
+    ,
 }
 
 const inter = Inter({

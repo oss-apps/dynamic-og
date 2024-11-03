@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-faqs.jpg'
+import { GithubIcon } from 'lucide-react'
 
 
 export function Hero() {
@@ -29,18 +30,13 @@ export function Hero() {
       </p>
       <div className="mt-10 flex justify-center flex-wrap gap-6">
         <Button href="/og/docs" className='min-w-56'>View templates</Button>
-        {/* <Button target='_blank' className='min-w-56'
-          href="https://cal.com/shrihari.dev/10min"
+        <Button target='_blank' className='min-w-56'
+          href="https://github.com/oss-apps/dynamic-og"
           variant="outline"
         >
-          <svg
-            aria-hidden="true"
-            className="h-3 w-3 flex-none fill-fuchsia-600 group-active:fill-current"
-          >
-            <path d="m9.997 6.91-7.583 3.447A1 1 0 0 1 1 9.447V2.553a1 1 0 0 1 1.414-.91L9.997 5.09c.782.355.782 1.465 0 1.82Z" />
-          </svg>
-          <span className="ml-3">Schedule a meeting</span>
-        </Button> */}
+          <GithubIcon className='h-4 w-4'/>
+          <span className="ml-2 font-medium">Star on GitHub</span>
+        </Button>
       </div>
       <div className="mt-36 lg:mt-44">
 

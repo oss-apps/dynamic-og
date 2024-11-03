@@ -5,9 +5,10 @@ import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
-import { Button } from '@/components/Button'
+import { Button, SmallButton } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { NavLink } from './NavLink'
+import { Github } from 'lucide-react'
 
 function MobileNavLink({
   href,
@@ -115,15 +116,18 @@ export function Header() {
               <NavLink href="#pricing">Pricing</NavLink>
             </div>
           </div>
-          <div className="flex items-center gap-x-5 md:gap-x-8">
+          <div className="flex items-center gap-x-2 md:gap-x-8">
             <div className="hidden md:block">
               {/* <NavLink href="/login">Sign in</NavLink> */}
             </div>
+            <SmallButton href="https://github.com/oss-apps/dynamic-og" text="GitHub" icon={Github}></SmallButton>
             <Button target='_blank' href="https://discord.gg/XerKurJjyN" variant='outline' color="slate">
               <span>
                 <span className="inline">Join Discord </span>
               </span>
             </Button>
+
+
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>

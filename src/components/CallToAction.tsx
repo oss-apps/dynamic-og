@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-call-to-action.jpg'
+import { Github } from 'lucide-react'
 
 export function CallToAction() {
   return (
@@ -27,16 +28,11 @@ export function CallToAction() {
             Get free templates
           </Button>
             <Button target='_blank' className='min-w-56'
-              href="https://cal.com/shrihari.dev/10min"
+              href="https://github.com/oss-apps/dynamic-og"
               variant="outline"
             >
-              <svg
-                aria-hidden="true"
-                className="h-3 w-3 flex-none fill-stone-300 group-active:fill-current"
-              >
-                <path d="m9.997 6.91-7.583 3.447A1 1 0 0 1 1 9.447V2.553a1 1 0 0 1 1.414-.91L9.997 5.09c.782.355.782 1.465 0 1.82Z" />
-              </svg>
-              <span className="ml-3 text-stone-300">Schedule a meeting</span>
+              <Github className='h-3 w-3 text-stone-300' />
+              <span className="ml-3 text-stone-300">Star on GitHub</span>
             </Button>
           </div>
 
@@ -45,3 +41,5 @@ export function CallToAction() {
     </section>
   )
 }
+
+
