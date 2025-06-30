@@ -1,6 +1,7 @@
 import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
-import { DollarSign, Joystick, LayoutTemplate, Server } from 'lucide-react'
+import { DollarSign, Joystick, LayoutTemplate, Server, Search } from 'lucide-react'
 import { BuyButton } from './Button'
+import { Button } from './Button'
 
 const features = [
   {
@@ -59,6 +60,17 @@ export default function Feed() {
               </div>
             ))}
           </dl>
+        </div>
+        
+        {/* Search CTA */}
+        <div className="mt-16 text-center">
+          <p className="text-lg text-gray-600 mb-6">
+            Explore our collection of pre-designed templates to get started
+          </p>
+          <Button variant="solid"  href="/search">
+            <Search className='h-4 w-4 mr-2'/>
+            Search All Templates
+          </Button>
         </div>
       </div>
     </section>

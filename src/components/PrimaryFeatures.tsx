@@ -6,6 +6,8 @@ import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
+import { Button } from '@/components/Button'
+import { Search } from 'lucide-react'
 import docsSS from '@/images/screenshots/docs-ss.webp'
 import blogsSS from '@/images/screenshots/blogs-ss.webp'
 import profileSS from '@/images/screenshots/profile-ss.webp'
@@ -145,6 +147,17 @@ export function PrimaryFeatures() {
             </>
           )}
         </Tab.Group>
+        
+        {/* Search CTA */}
+        <div className="mt-16 text-center">
+          <p className="text-lg tracking-tight text-fuchsia-100 mb-6">
+            Explore all our templates and find the perfect one for your content
+          </p>
+          <Button href="/search" color="white" variant="outline">
+            <Search className='h-4 w-4 mr-2'/>
+            Search All Templates
+          </Button>
+        </div>
       </Container>
     </section>
   )
