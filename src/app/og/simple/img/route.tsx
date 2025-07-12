@@ -18,9 +18,10 @@ export async function GET(request: NextRequest) {
   const website: string = params.get("website") || "No website"
   const dark = params.get('dark') == 'true'
 
+  const quality = parseInt(params.get('quality') || '1');
 
   const t = {
-    title, website, dark
+    title, website, dark, quality
   }
 
   return new ImageResponse(
@@ -28,8 +29,8 @@ export async function GET(request: NextRequest) {
       <SimpleTemplate t={t} />
     ),
     {
-      width: 1200,
-      height: 630,
+      width: 1200/quality,
+      height: 630/quality,
       fonts: [
         {
           name: 'Poppins',

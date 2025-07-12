@@ -15,7 +15,8 @@ const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN
 const SimpleTemplateSchema = z.object({
   title: z.string(),
   website: z.string(),
-  dark: z.boolean()
+  dark: z.boolean(),
+  quality : z.number()
 })
 
 export type TSimpleTemplate = z.infer<typeof SimpleTemplateSchema>
@@ -23,7 +24,8 @@ export type TSimpleTemplate = z.infer<typeof SimpleTemplateSchema>
 const defaultValue: TSimpleTemplate = {
   title: "Every moment is a fresh beginning.",
   website: "blogs.gratitude.com",
-  dark: false
+  dark: false,
+  quality : 1
 }
 
 const templateLiteral = `${DOMAIN}/${routes.simple}?${getTemplate(defaultValue)}`
@@ -118,6 +120,13 @@ export default function Simple() {
             <Input
               {...register('website')}
               error={errors.website?.message?.toString()}
+            />
+          </div>
+          <div className="w-full">
+            <Label>Quality (1 = High, 3 = Low)</Label>
+            <Input type="number"
+              {...register('quality', {valueAsNumber: true}) }
+              error={errors.quality?.message?.toString()}
             />
           </div>
           <div>

@@ -1,27 +1,45 @@
 import { TSimpleTemplate } from "./page";
 
-const themeConfigs = {
-  light: {
+const themeConfigs = (quality: number) => {
+  return { 
+    light: {
     background: '#f7fee7',
     color: '#1a2e05',
-
-  },
-  dark: {
+    padding: `${24 / quality}px`,
+    margin: `${6 / quality}px`,
+    borderRadius: `${24 / quality}px`,
+    fontSize: 72 / quality,
+    fontWeight: 'lighter',
+    borderWidth: `${2 / quality}px`,
+    hrBorderWidth: `${1 / quality}px`,
+    websiteFontSize: `${52 / quality}`,
+    websiteFontWeight: '700',
+    },
+    dark: {
     background: '#1a2e05',
     color: '#f7fee7',
+    padding: `${24 / quality}px`,
+    margin: `${6 / quality}px`,
+    borderRadius: `${24 / quality}px`,
+    fontSize: 72 / quality,
+    fontWeight: 'lighter',
+    borderWidth: `${2 / quality}px`,
+    hrBorderWidth: `${1 / quality}px`,
+    websiteFontSize: `${52 / quality}`,
+    websiteFontWeight: '700',
+    }
   }
 }
 
 export function SimpleTemplate({ t }: { t: TSimpleTemplate }) {
-  const theme = t.dark ? themeConfigs['dark'] : themeConfigs['light']
+  const theme = t.dark ? themeConfigs(t.quality)['dark'] : themeConfigs(t.quality)['light']
   return (
     <div
       style={{
-
         background: theme.background,
         width: '100%',
         color: theme.color,
-        padding: "24px",
+        padding: theme.padding,
         height: '100%',
         display: 'flex',
         alignItems: 'center',
@@ -29,22 +47,28 @@ export function SimpleTemplate({ t }: { t: TSimpleTemplate }) {
       }}
     >
       <div style={{
-        margin: '6px', padding: "24px", width: "100%", fontWeight: "lighter",
-        borderRadius: "24px", height: "100%", fontSize: 72, display: "flex", flexDirection: "column",
-        border: `${theme.color} 2px solid`, color: theme.color
+        margin: theme.margin,
+        padding: theme.padding,
+        width: "100%",
+        fontWeight: theme.fontWeight,
+        borderRadius: theme.borderRadius,
+        height: "100%",
+        fontSize: theme.fontSize,
+        display: "flex",
+        flexDirection: "column",
+        border: `${theme.color} ${theme.borderWidth} solid`,
+        color: theme.color
       }}>
         {t.title?.slice(0, 80)}
-        <hr style={{ border: `${theme.color} 1px solid`, width: "100%" }}></hr>
-        <p style={{ fontSize: "52", fontWeight: "700", display: 'flex', justifyContent: 'center', color: theme.color }}> {t.website}</p>
-
+        <hr style={{ border: `${theme.color} ${theme.hrBorderWidth} solid`, width: "100%" }}></hr>
+        <p style={{ fontSize: theme.websiteFontSize, fontWeight: theme.websiteFontWeight, display: 'flex', justifyContent: 'center', color: theme.color }}> {t.website}</p>
       </div>
-
     </div>
   )
 }
 
 export function SimpleTemplateUI({ t }: { t: TSimpleTemplate }) {
-  const theme = t.dark ? themeConfigs['dark'] : themeConfigs['light']
+  const theme = t.dark ? themeConfigs(2)['dark'] : themeConfigs(2)['light']
   return (
     <div
       className="flex items-center justify-center p-4  min-h-72 shadow-md border rounded w-full"
