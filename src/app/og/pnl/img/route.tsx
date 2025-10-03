@@ -1,4 +1,4 @@
-import { SimpleTemplate } from '../Simple';
+import { TemplateOG } from '../Pnl';
 import { ImageResponse } from 'next/og'
 import { NextRequest } from 'next/server'
 
@@ -14,24 +14,28 @@ export async function GET(request: NextRequest) {
 
   const params = request.nextUrl.searchParams
 
-  const title: string = params.get("title") || "No title";
-  const website: string = params.get("website") || "No website"
+  const header: string = params.get("header") || "No title";
+  const amount: string = params.get("amount") || "No Amount"
+  const tag: string = params.get("tag") || "No tag"
+  const image : string = params.get("image") || "NO Image";
+  const domain: string = params.get("domain") || "No website";
+  const description: string = params.get("description") || "No description";
   const dark = params.get('dark') == 'true'
-
   let quality = parseInt(params.get('quality') || '1');
-  if (quality > 3) quality = 3;
+  if ( quality > 3) quality = 3;
+
 
   const t = {
-    title, website, dark, quality
+    domain, header, image, dark, amount, tag, quality, description
   }
 
   return new ImageResponse(
     (
-      <SimpleTemplate t={t} />
+      <TemplateOG t={t} />
     ),
     {
-      width: 1200/quality,
-      height: 630/quality,
+      width: 1200 / quality,
+      height: 630 / quality,
       fonts: [
         {
           name: 'Poppins',

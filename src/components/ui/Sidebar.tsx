@@ -3,15 +3,14 @@ import { classNames } from '@/utils/classNames'
 import {
   CheckCircleIcon,
   NewspaperIcon,
-  DocumentIcon,
   UserCircleIcon,
   RectangleStackIcon,
-  PhotoIcon,
+  ChartBarSquareIcon
 } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Button, BuyButtonSmall, SmallButton } from '../Button'
-import { Presentation, Book, Image, RotateCcwSquare, RotateCwSquare, Github } from 'lucide-react'
+import { Presentation, Book, Image, RotateCcwSquare, RotateCwSquare, Github, LucideBarChartHorizontal } from 'lucide-react'
 
 const navigation = [
   { name: 'Docs', href: '/og/docs', icon: Book, count: '5', current: true },
@@ -22,6 +21,8 @@ const navigation = [
   { name: 'R-Split', href: '/og/split-img', icon: RotateCwSquare, count: '20+', current: false } ,
   { name: 'L-Split', href: '/og/split-img-2', icon: RotateCcwSquare, count: '20+', current: false },
   { name: 'Screenshot', href: '/og/ss', icon: Presentation, count: '20+', current: false },
+  { name: 'Profit & Loss', href: '/og/pnl', icon: ChartBarSquareIcon, count: '20+', current: false },
+
 
 ]
 const teams = [

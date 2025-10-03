@@ -10,6 +10,7 @@ export const routes = {
   simple: 'og/simple/img',
   'split-image' : 'og/split-img/img',
   'l-split': 'og/split-img-2/img',
-  'screenshot' : 'og/ss/img'
+  'screenshot' : 'og/ss/img',
+  'pnl' : 'og/pnl/img'
 
 }

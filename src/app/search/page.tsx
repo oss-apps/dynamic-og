@@ -16,6 +16,7 @@ import { ProfileTemplateUI } from "@/app/og/profile/Profiles";
 import { TemplateUI as SplitImageTemplateUI } from "@/app/og/split-img/SplitImage";
 import { TemplateUI as SplitImage2TemplateUI } from "@/app/og/split-img-2/SplitImage2";
 import { TemplateUI as ScreenshotTemplateUI } from "@/app/og/ss/Ss";
+import {TemplateUI as ProfitAndLossTemplateUI} from "@/app/og/pnl/Pnl";
 
 // Import template types
 import { TSimpleTemplate } from "@/app/og/simple/page";
@@ -25,6 +26,7 @@ import { TActionTemplate } from "@/app/og/action/page";
 import { TProfileTemplate } from "@/app/og/profile/page";
 import { Template as SplitImageTemplate } from "@/app/og/split-img/page";
 import { Template as ScreenshotTemplate } from "@/app/og/ss/page";
+import { Template as PNLTemplate } from "@/app/og/pnl/page";
 
 interface TemplateData {
   id: string;
@@ -168,6 +170,25 @@ const templates: TemplateData[] = [
       image: `${process.env.NEXT_PUBLIC_DOMAIN}/fillers/stripe-og.jpeg`,
       dark: false
     } as ScreenshotTemplate
+  },
+  {
+    id: "pnl",
+    name: "Profit & Loss",
+    description: "Display Profit and Loss statement snapshots",
+    route: "/og/pnl",
+    tags: ["pnl", "profit", "loss", "statement", "financial", "showcase", "photo", "image"],
+    category: "Technical",
+    component: ProfitAndLossTemplateUI,
+    defaultValues: {
+      header: "Stay Focused & Earn Money",
+      amount: "+120.18",
+      tag: "PNL",
+      image: `https://dynamicog.com/fillers/forbes-logo.jpeg`,
+      description: "10% increase vs.previous period",
+      domain: "www.sample.com",
+      quality: 1,
+      dark: false
+    } as PNLTemplate
   }
 ];
 
